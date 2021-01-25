@@ -4,7 +4,7 @@ const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
 const hostname = '127.0.0.1';
-const port = 3000;
+const port = process.env.PORT || 80;
 
 const server = http.createServer((req, res) => {
     getWHSMenu((items) => {
